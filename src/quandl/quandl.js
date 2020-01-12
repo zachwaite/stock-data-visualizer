@@ -27,3 +27,13 @@ export const getCHRISData = (code) => {
   const dataPromise = axios.get(url);
   return dataPromise;
 }
+
+/**
+ * Get fundamentals data
+ *
+ */
+export const getZACKSData = (ticker) => {
+  const url = `https://www.quandl.com/api/v3/datatables/ZACKS/AR?m_ticker=${ticker}&ticker=${ticker}&api_key=${API_KEY}`;
+  const dataPromise = axios.get(url);
+  return dataPromise;
+}

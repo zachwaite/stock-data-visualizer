@@ -176,4 +176,56 @@ div.tooltip {
   margin-left: 5px;
 }
 
+// slide in ratings panel
+.ratings {
+  background-color: $color-alpha-primary;
+  border: 1px solid black;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  color: white;
+  position: fixed;
+  bottom: 35vh;
+  right: -15vw;
+  width: 20vw;
+  height: 40vh;
+  transition: right 500ms linear;
+
+  .ratingsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 18px;
+
+    .ratings-logo-img {
+      max-height: 35px;
+    }
+
+  }
+  .ratingsFormContainer {
+
+    .ratingsTickerInput {
+      width: 64%;
+      float: right;
+      margin-right: 5%;
+      line-height: 2.0;
+    }
+
+    .ratingsTickerOutput {
+      width: 64%;
+      float: right;
+      margin-right: 5%;
+      margin-top: 1rem;
+      height: 200px;
+    }
+
+  }
+
+
+}
+
+.ratings.in {
+  right: 0;
+  transition: right 500ms linear;
+}
+
 
