@@ -7,11 +7,12 @@ import { AppComponent } from "./components/App";
 import { D3Component } from "./components/D3Component";
 import { SideBarComponent } from "./components/Sidebar";
 import { CarouselComponent } from "./components/Image";
-import { RatingsComponent } from "./components/RatingsComponent";
+import { FundamentalsComponent } from "./components/FundamentalsComponent";
 
 import { getRandomFinanceImages } from "./unsplash/unsplash";
 import { readBATSmetadata } from "./d3/csv";
 import { readCHRISmetadata } from "./d3/csv";
+import { getFundamentalsData } from "./usfundamentals/usfundamentals";
 
 // available data sources
 const sources = [
@@ -37,6 +38,6 @@ const sources = [
     [new SideBarComponent({}, null, [
       [new CarouselComponent({}, null, []), "carousel"],
     ]), "sidebar"],
-    [new RatingsComponent({}, null, []), "ratingsPanel"],
+    [new FundamentalsComponent({}, null, []), "fundamentalsPanel"],
   ]);
 })();
